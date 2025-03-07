@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senin İçin Özel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .message-box {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+        .special-button {
+            margin-top: 20px;
+            background: #ff5e78;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 25px;
+            color: white;
+            transition: 0.3s;
+        }
+        .special-button:hover {
+            background: #ff2e63;
+        }
+        .heart {
+            color: red;
+            font-size: 24px;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    </audio>
+    <div class="container">
+        <h1>🌸 8 Mart Kadınlar Günü Kutlu Olsun! 🌸</h1>
+        <div class="message-box">
+            <h2>Sen her zaman benim için çok özelsin...</h2>
+            <p>Bu siteyi sana özel hazırladım çünkü sen en iyisini hak ediyorsun.</p>
+            <button class="btn special-button" onclick="showSurprise()">Sürprizi Gör 💖</button>
+            <p id="surprise-message" class="hidden"><i class="fas fa-heart heart"></i> Senin gibi biri bir daha asla olmayacak! 💖</p>
+        </div>
+    </div>
+
+    <script>
+        function showSurprise() {
+            const messages = [
+                "Sen benim için daima özelsin! ❤️",
+                "Gülümsemen dünyamı aydınlatıyor! 😊",
+                "Her zaman mutlu ol, çünkü sen harikasın! ✨",
+                "Senin gibi biri bir daha asla olmayacak! 💖"
+            ];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            const messageElement = document.getElementById("surprise-message");
+            messageElement.innerHTML = `<i class='fas fa-heart heart'></i> ${randomMessage}`;
+            messageElement.classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
