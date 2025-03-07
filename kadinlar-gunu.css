@@ -1,0 +1,127 @@
+body {
+    background: url('https://your-image-url.com/flowers-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.container {
+    margin-top: 50px;
+}
+.message-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+    color: #333;
+    border: 3px solid #ff5e78;
+    position: relative;
+    z-index: 2;
+}
+.special-button {
+    margin-top: 20px;
+    background: #ff5e78;
+    border: none;
+    padding: 12px 30px;
+    font-size: 20px;
+    border-radius: 30px;
+    color: white;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.special-button:hover {
+    background: #ff2e63;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+.heart {
+    color: red;
+    font-size: 24px;
+    animation: heartbeat 1s infinite;
+}
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+.hidden { display: none; }
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+}
+.overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Sayfa ve body tam ekran olacak şekilde ayarlanır */
+html, body {
+    height: 100%; /* Sayfanın yüksekliğini tam ekran yapar */
+    margin: 0; /* Sayfa kenar boşluklarını sıfırlar */
+    padding: 0; /* Sayfa içindeki boşlukları sıfırlar */
+    overflow-y: scroll; /* Sayfanın dikey kaymasını sağlar */
+}
+
+/* Arka plan rengi ve stil */
+body {
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* İçerik kutusu */
+.container {
+    margin-top: 50px;
+}
+
+/* Mesaj kutusu */
+.message-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+/* Sürpriz butonu */
+.special-button {
+    margin-top: 20px;
+    background: #ff5e78;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 25px;
+    color: white;
+    transition: 0.3s;
+}
+
+.special-button:hover {
+    background: #ff2e63;
+}
+
+/* Kalp animasyonu */
+.heart {
+    color: red;
+    font-size: 24px;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Gizli öğe */
+.hidden {
+    display: none;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahar İçin Özel</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Arial', sans-serif; background: linear-gradient(to right, #f7a1d1, #f1d0a3); color: white; text-align: center; position: relative; overflow: scroll; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <audio autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div style="background: rgba(255, 255, 255, 0.9); border-radius: 25px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); padding: 50px; width: 80%; max-width: 600px; margin-bottom: 20px; position: relative;">
+        <h1 id="baslik" style="font-size: 2.5em; font-weight: bold; color: #ff5e78;">🌸 8 Mart Kadınlar Günü Kutlu Olsun, Bahar! 🌸</h1>
+        <h2 id="baslik2" style="font-size: 1.8em; font-weight: 400; color: #333;">Hayatımı daha güzel kılan senin gibi biri...</h2>
+        <p id="baslik3" style="font-size: 1.2em; color: #333; margin-top: 20px;">Bu siteyi sana özel hazırladım çünkü sen her şeyin en iyisini hak ediyorsun. Şimdi seni şaşırtmak istiyorum!</p>
+        <button id="butonsuprise" onclick="showSurprise()" style="margin-top: 20px; background: #ff5e78; border: none; padding: 15px 30px; font-size: 1.2em; border-radius: 30px; color: white; cursor: pointer; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); transition: background-color 0.3s ease;">
+            Sürprizi Gör 💖
+        </button>
+        
+            <p id="surprise-message" style="margin-top: 20px; font-size: 1.3em; color: #333; display: none;"></p>
+        
+    </div>
+
+
+    <script>
+        function showSurprise() {
+           var baslik =  document.getElementById("baslik");
+           baslik.remove();
+           var baslik2 =  document.getElementById("baslik2");
+           baslik2.remove();
+           var baslik3 =  document.getElementById("baslik3");
+           baslik3.remove();
+           var butonsuprise = document.getElementById("butonsuprise");
+           butonsuprise.remove();
+            const messages = [
+            "Merhaba Bahar. Biliyorum bana çok kızgınsin çok sogudun çok isteksizsin çok uzaklaştın bambaşka bir adam oldum gözünde. Ama bunlar bu mesajı atmami asla etkilememeli. Ben 7 ay önce dünyanın en güçlü kadınını tanıdım. Etrafına ışık saçan güneş olan bir el olan herkese yetişmeye çalışan çok güçlü bir kadın tanıdım. Yüreği güçlü kalbi güçlü karakteri güçlü insanlığı güçlü bir kadın tanıdım. Etrafında ki herşeye rağmen tüm olumsuz örneklere rağmen gördüğü tüm zorluklara rağmen her seferinde düşmeden dik durabilen bir kadin. Hayatın hiçbir bölümünde gerektiği zaman koca bir duvar olan gerektiği zaman semsert bir kadın olan ve gerektiği zaman da o kocaman yüreğini açan bir kadın. En çok bu gün senin için özel olmali en çok hayatta herşeye rağmen ayakta durmaya çalışan kendini asla durma noktasına getirmeyen ve hiçbir zaman pes etmeyen bir kadın için özel olmalı. Yeri geldi zorluk gördün, yeri geldi yalnız kaldın bu kocaman dünyada, yeri geldi ailen yanında olmadi, yeri geldi kalbin ağrıdı yorgun düştün ama her zaman mücadele etmeye devam ettin. Her kadın, kendi hikayesinin kahramanıdir. Hayallerinin peşinden cesurca koşuyorsun ve yaşamın her alanında fark yaratıyorsun. Güçlü ve cesur kadın olmanın yanı sıra, etrafına daima umut mutluluk merhamet sevgi ve güzel gülümsemeler saçıyorsun. Hayatıma kattığın sevgi, güç ve güzellik için minnettarım. Seninle her gün yeniden doğuyorum. Hayatıma bir gülümseme getirdiğin ve günlerimi her zamankinden daha parlak yaptığın için teşekkür ederim. Bu özel günde, hayatımda ne kadar önemli olduğunu bildirmek ve hayatıma verdiğin tüm destekler için sana teşekkür etmek istiyorum. Kadınlar günün kutlu olsun tanıdığım en güçlü kadın."
+                
+            ];  
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            const messageElement = document.getElementById("surprise-message");
+            messageElement.innerHTML = `<i class='fas fa-heart' style='color: red; font-size: 24px; animation: heartbeat 1s infinite;'></i> ${randomMessage}`;
+            messageElement.style.display = "block";
+        }
+    </script>
+
+    <style>
+        /* Heartbeat animation for the heart icon */
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        
+    </style>
+</body>
+</html>
